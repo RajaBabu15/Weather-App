@@ -11,4 +11,4 @@ Following project consist of
 3. app.js
 4. assets folder(which contains necessary assests require to run faster)
 
-![Alt text](.\assests\aqi.png?raw=true "Title")
+![Alt text](.\assests\aqi.png)
