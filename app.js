@@ -14,14 +14,15 @@ let gustWindSpeedEl = document.querySelector(".winds span");
 let humidityEl = document.querySelector(".humidity span")
 let precipEl = document.querySelector(".precip span")
 let pressEl = document.querySelector(".press span")
-let lightEl=document.querySelector(".lght span");
+let lightEl = document.querySelector(".lght span");
 let windsEl = document.querySelector(".wnds span");
-let carbonEl=document.querySelector(".co span");
+let carbonEl = document.querySelector(".co span");
 let noEl = document.querySelector(".no span");
 let ozoEl = document.querySelector(".o span");
 let pm25El = document.querySelector(".pm25 span");
 let pm10El = document.querySelector(".pm10 span");
 let soEl = document.querySelector(".so span");
+let aqiEl = document.querySelector(".aqi");
 
 const findMyState = () => {
     const success = (position) => {
@@ -53,11 +54,16 @@ window.addEventListener('load', () => {
     defaultLocationWeather();
 });
 
+function getIndex(text) {
+    var i=5;
+    return i;
+}
+
 function defaultLocationWeather() {
     let long;
     let lat;
     temperatureSpan.textContent = "\u00B0C";
-    
+
     windsEl.textContent = "12.2kph/7.6mph \"NW\" @323\u00B0";
 
     if (navigator.geolocation) {
@@ -70,18 +76,27 @@ function defaultLocationWeather() {
                 return response.json();
             }).then(data => {
                 console.log(data);
-                const { gust_kph,gust_mph,humidity,precip_in,precip_mm,pressure_in,pressure_mb,feelslike_c, feelslike_f, uv,vis_km,vis_miles,wind_degree,wind_dir,wind_kph,wind_mph} = data.current;
-                console.log(feelslike_f);
+                const { gust_kph, gust_mph, humidity, precip_in, precip_mm, pressure_in, pressure_mb, feelslike_c, feelslike_f, uv, vis_km, vis_miles, wind_degree, wind_dir, wind_kph, wind_mph } = data.current;
+                const { co, no2, o3, pm2_5, pm10, so2 } = data.current.air_quality;
+                carbonEl.innerText = co.toFixed(2);
+                noEl.innerText = no2.toFixed(2);
+                ozoEl.innerText = o3.toFixed(2);
+                pm25El.innerText = pm2_5.toFixed(2);
+                pm10El.innerText = pm10.toFixed(2);
+                soEl.innerText = so2.toFixed(2);
+                const {name, region,country}=data.location;
+                aqiEl.innerText="Air Quality Index of : "+name+" "+region+" , "+country;
                 const { text } = data.current.condition;
                 //set DOM Elements from api
                 temperatureDegree.innerText = feelslike_c;
                 temperatureDescritpion.innerText = text;
-                gustWindSpeedEl.innerText = gust_kph+"kph/"+gust_mph+"mph";
-                humidityEl.innerText=humidity+"%";
-                precipEl=precip_in+"in/"+precip_mm+"mm";
-                pressEl=pressure_in+"in/"+pressure_mb+"mb";
-                lightEl.innerText =vis_km+"km/"+vis_miles+"miles [ with UV : "+uv+" sf]";
-                windsEl.innerText=wind_kph+"kph/"+wind_mph+"mph \""+wind_dir+"\" @"+wind_degree+"\u00B0";
+                gustWindSpeedEl.innerText = gust_kph + "kph/" + gust_mph + "mph";
+                humidityEl.innerText = humidity + "%";
+                precipEl = precip_in + "in/" + precip_mm + "mm";
+                pressEl = pressure_in + "in/" + pressure_mb + "mb";
+                lightEl.innerText = vis_km + "km/" + vis_miles + "miles [ with UV : " + uv + " sf]";
+                windsEl.innerText = wind_kph + "kph/" + wind_mph + "mph \"" + wind_dir + "\" @" + wind_degree + "\u00B0";
+
                 locationTimezone.textContent = data.location.region + " " + data.location.country;
                 let str = data.current.condition.icon;
                 let nu = str.substring(str.length - 7, str.length - 4);
@@ -136,18 +151,26 @@ function displayWeather(location) {
         return response.json();
     }).then(data => {
         console.log(data);
-        const { gust_kph,gust_mph,humidity,precip_in,precip_mm,pressure_in,pressure_mb,feelslike_c, feelslike_f, uv,vis_km,vis_miles,wind_degree,wind_dir,wind_kph,wind_mph} = data.current;
-        console.log(feelslike_f);
+        const { gust_kph, gust_mph, humidity, precip_in, precip_mm, pressure_in, pressure_mb, feelslike_c, feelslike_f, uv, vis_km, vis_miles, wind_degree, wind_dir, wind_kph, wind_mph } = data.current;
+        const { co, no2, o3, pm2_5, pm10, so2 } = data.current.air_quality;
+        carbonEl.innerText = co.toFixed(2);
+        noEl.innerText = no2.toFixed(2);
+        ozoEl.innerText = o3.toFixed(2);
+        pm25El.innerText = pm2_5.toFixed(2);
+        pm10El.innerText = pm10.toFixed(2);
+        soEl.innerText = so2.toFixed(2);
+        const {name, region,country}=data.location;
+        aqiEl.innerText="Air Quality Index of : "+name+" "+region+" , "+country;
         const { text } = data.current.condition;
         //set DOM Elements from api
         temperatureDegree.innerText = feelslike_c;
         temperatureDescritpion.innerText = text;
-        gustWindSpeedEl.innerText = gust_kph+"kph/"+gust_mph+"mph";
-        humidityEl.innerText=humidity+"%";
-        precipEl=precip_in+"in/"+precip_mm+"mm";
-        pressEl=pressure_in+"in/"+pressure_mb+"mb";
-        lightEl.innerText =vis_km+"km/"+vis_miles+"miles [ with UV : "+uv+" sf]";
-        windsEl.innerText=wind_kph+"kph/"+wind_mph+"mph \""+wind_dir+"\" @"+wind_degree+"\u00B0";
+        gustWindSpeedEl.innerText = gust_kph + "kph/" + gust_mph + "mph";
+        humidityEl.innerText = humidity + "%";
+        precipEl = precip_in + "in/" + precip_mm + "mm";
+        pressEl = pressure_in + "in/" + pressure_mb + "mb";
+        lightEl.innerText = vis_km + "km/" + vis_miles + "miles [ with UV : " + uv + " sf]";
+        windsEl.innerText = wind_kph + "kph/" + wind_mph + "mph \"" + wind_dir + "\" @" + wind_degree + "\u00B0";
         locationTimezone.textContent = data.location.region + " " + data.location.country;
         let str = data.current.condition.icon;
         let nu = str.substring(str.length - 7, str.length - 4);
