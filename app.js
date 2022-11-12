@@ -79,7 +79,7 @@ function defaultLocationWeather() {
                 locationTimezone.textContent = data.location.region + " " + data.location.country;
                 let str = data.current.condition.icon;
                 let nu = str.substring(str.length - 7, str.length - 4);
-                image.src = "\\assests\\weather\\64x64\\" + ((data.current == 1) ? "day" : "night") + "\\" + nu + ".png";
+                image.src = ".\\assests\\weather\\64x64\\" + ((data.current == 1) ? "day" : "night") + "\\" + nu + ".png";
 
                 //Converter degree celsius to farenheit on click
                 temperatureSection.addEventListener('click', () => {
@@ -145,7 +145,7 @@ function displayWeather(location) {
         locationTimezone.textContent = data.location.region + " " + data.location.country;
         let str = data.current.condition.icon;
         let nu = str.substring(str.length - 7, str.length - 4);
-        image.src = "\\assests\\weather\\64x64\\" + ((data.current == 1) ? "day" : "night") + "\\" + nu + ".png";
+        image.src = ".\\assests\\weather\\64x64\\" + ((data.current == 1) ? "day" : "night") + "\\" + nu + ".png";
 
         //Converter degree celsius to farenheit on click
         temperatureSection.addEventListener('click', () => {
