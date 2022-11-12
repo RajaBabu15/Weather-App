@@ -5,15 +5,18 @@
 }
 
 body {
-    height: 100vh;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
     background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
     font-family: sans-serif;
     color: white;
     font-family: "Inter", -apple-system, "Nunito", BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+html,
+body {
+    overflow-y: scroll;
 }
 
 .location,
@@ -28,7 +31,7 @@ body {
 
 .location {
     position: relative;
-    top:20px;
+    top: 20px;
 }
 
 .temperature {
@@ -212,4 +215,107 @@ body {
 .lght span,
 .wnds span {
     padding: 10px;
+}
+
+hr {
+    border-style: none;
+    height: 2px;
+    width: 30%;
+    border-top-style: dotted;
+    border-color: gray;
+    border-width: 5px;
+}
+
+img {
+    width: 600px;
+    height: 500px;
+    border-radius: 50px 50px 50px 50px;
+    -moz-border-radius: 50px 50px 50px 50px;
+    -webkit-border-radius: 50px 50px 50px 50px;
+    border: 0px solid #000000;
+}
+
+.lt {
+    position: relative;
+    right: 50px;
+}
+
+.rt {
+    position: relative;
+    left: 50px;
+}
+
+.o {
+    background: rgba(248, 115, 192, 0.32);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+    border: 1px solid rgba(248, 115, 192, 0.39);
+}
+
+.no {
+    background: rgba(252, 60, 255, 0.13);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+    border: 1px solid rgba(252, 60, 255, 0.35);
+}
+
+.pm25 {
+    background: rgba(60, 255, 91, 0.13);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+    border: 1px solid rgba(60, 255, 91, 0.35);
+}
+
+.pm10 {
+    background: rgba(115, 248, 242, 0.65);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+    border: 1px solid rgba(115, 248, 242, 0.39);
+}
+
+.so {
+    background: rgba(104, 254, 140, 0.13);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+    border: 1px solid rgba(104, 254, 140, 0.35);
+}
+
+.co {
+    background: rgba(192, 177, 59, 0.31);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+    border: 1px solid rgba(192, 177, 59, 0.35);
+}
+
+.colored-section {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    flex-direction: column;
+}
+
+.aqi {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    font-weight: 700;
 }

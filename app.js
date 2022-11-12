@@ -16,7 +16,12 @@ let precipEl = document.querySelector(".precip span")
 let pressEl = document.querySelector(".press span")
 let lightEl=document.querySelector(".lght span");
 let windsEl = document.querySelector(".wnds span");
-
+let carbonEl=document.querySelector(".co span");
+let noEl = document.querySelector(".no span");
+let ozoEl = document.querySelector(".o span");
+let pm25El = document.querySelector(".pm25 span");
+let pm10El = document.querySelector(".pm10 span");
+let soEl = document.querySelector(".so span");
 
 const findMyState = () => {
     const success = (position) => {
@@ -52,6 +57,7 @@ function defaultLocationWeather() {
     let long;
     let lat;
     temperatureSpan.textContent = "\u00B0C";
+    
     windsEl.textContent = "12.2kph/7.6mph \"NW\" @323\u00B0";
 
     if (navigator.geolocation) {
