@@ -11,5 +11,9 @@ Following project consist of
 3. app.js
 4. assets folder(which contains necessary assests require to run faster)
 
-![Alt text](\assests\aqi.png)
-<img src="/assests/aqi.png" width="128"/>
+# Following are the screenshots of website
+<img src="/assests/s1.jpg" width="650"/>
+<img src="/assests/s2.jpg" width="650"/>
+
+
+Please PROVIDE LOCATION PERMISSION to website
