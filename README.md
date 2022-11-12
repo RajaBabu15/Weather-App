@@ -12,3 +12,4 @@ Following project consist of
 4. assets folder(which contains necessary assests require to run faster)
 
 ![Alt text](\assests\aqi.png)
+<img src="/assests/aqi.png" width="128"/>
