@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+    <link data-n-head="1" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.min.js"
+        integrity="sha512-5BqtYqlWfJemW5+v+TZUs22uigI8tXeVah5S/1Z6qBLVO7gakAOtkOzUtgq6dsIo5c0NJdmGPs0H9I+2OHUHVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <form action="" class="search-bar">
+            <input class="input-location" type="text" placeholder="Enter location Coordinates eg.[28.7041,77.1025]"
+                name="q">
+            <button class="search-button" type="submit" id="icon-search-button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+    </div>
+    <h1 id="warning"></h1>
+    <div class="location">
+        <h1 class="location-timezone">
+            TimeZone
+        </h1>
+        <img src="assests\\weather\\64x64\\day\\113.png" class="weather-icon" alt="WeatherIcons">
+
+    </div>
+    <div class="temperature">
+        <div class="degree-section">
+            <h2 class="temperature-degree">34</h2>
+            <span>C</span>
+        </div>
+        <div class="temperature-description">
+            It is freaking cold.
+        </div>
+    </div>
+    <div class="d-flex align-content-center flex-row bd-highlight mb-3">
+        <div class="p-2 bd-highlight winds">
+            <h2 class="gustWinds">
+                Gust Winds Speed :
+            </h2>
+            <span>14kph/8.7mph</span>
+        </div>
+        <div class="p-2 bd-highlight humidity">
+            <h2 class="humidity-heading">Humidity : </h2>
+            <span>26</span>
+        </div>
+        <div class="p-2 bd-highlight precip">
+            <h2 class="precipitation">Precipitation : </h2>
+            <span>0in/0mm</span>
+        </div>
+        <div class="p-2 bd-highlight press">
+            <h2 class="pressure">Pressure : </h2>
+            <span>29.91in/1013mb</span>
+        </div>
+    </div>
+    <div class="d-flex align-content-center flex-row bd-highlight mb-3">
+        <div class="p-2 bd-highlight lght">
+            <h2 class="light">
+                Visibility :
+            </h2>
+            <span>10km/6miles [with UV : 8 sf]</span>
+        </div>
+        <div class="p-2 bd-highlight wnds">
+            <h2 class="humidity-heading">Winds : </h2>
+            <span>12.2kph/7.6mph "NW" @323</span>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

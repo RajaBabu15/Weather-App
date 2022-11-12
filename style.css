@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
+    font-family: sans-serif;
+    color: white;
+    font-family: "Inter", -apple-system, "Nunito", BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.location,
+.temperature {
+    height: 30vh;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.location {
+    position: relative;
+    top:20px;
+}
+
+.temperature {
+    bottom: 50px;
+    flex-direction: column;
+}
+
+.degree-section {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.degree-section span {
+    margin: 10px;
+    font-size: 30px;
+}
+
+.degree-section h2 {
+    font-size: 40px;
+}
+
+.weather-icon {
+    position: relative;
+    width: 75px;
+    height: 75px;
+    border-radius: 10%;
+}
+
+.container {
+    position: relative;
+    top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.temperature-description {
+    position: relative;
+    bottom: 15px;
+    font-size: 47px;
+    font-family: 'Cedarville Cursive', cursive;
+}
+
+.location-timezone {
+    font-family: 'Poppins', sans-serif;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+    backdrop-filter: blur(4px) saturate(180%);
+}
+
+.search-bar input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: #cac7ff;
+}
+
+::placeholder {
+    color: #cac7ff;
+}
+
+.search-bar button img {
+    width: 30px;
+}
+
+.search-bar button {
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: #58629b;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background: #7080db;
+}
+
+.search-bar:active {
+    color: #574efc;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-child {
+    flex: 1;
+}
+
+.flex-child:first-child {
+    margin-right: 10%;
+}
+
+
+
+.winds,
+.humidity,
+.precip,
+.press,
+.lght,
+.wnds {
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.humidity {
+    background: rgba(60, 170, 255, 0.13);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+    border: 1px solid rgba(60, 170, 255, 0.35);
+}
+
+.press {
+    background: rgba(252, 60, 255, 0.13);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+    border: 1px solid rgba(252, 60, 255, 0.35);
+}
+
+.winds {
+    background: rgba(60, 255, 91, 0.13);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+    border: 1px solid rgba(60, 255, 91, 0.35);
+}
+
+.precip {
+    background: rgba(255, 60, 60, 0.13);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+    border: 1px solid rgba(255, 60, 60, 0.35);
+}
+
+.lght {
+    background: rgba(104, 254, 140, 0.13);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+    border: 1px solid rgba(104, 254, 140, 0.35);
+}
+
+.wnds {
+    background: rgba(192, 177, 59, 0.31);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+    border: 1px solid rgba(192, 177, 59, 0.35);
+}
+
+.winds span,
+.humidity span,
+.precip span,
+.press span,
+.lght span,
+.wnds span {
+    padding: 10px;
+}
